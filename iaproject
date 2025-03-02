@@ -1,0 +1,122 @@
+Aqui está um código básico em HTML, CSS e JavaScript para seu site pessoal, onde você pode exibir seus projetos de TI:
+
+### Estrutura do projeto:
+```
+/zenio-almeida-site
+│── index.html
+│── style.css
+│── script.js
+│── images/ (pasta para imagens)
+│── projects/ (pasta para seus projetos)
+```
+
+---
+
+### **1. index.html** (Página principal)
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenio Almeida - Projetos de TI</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Zenio Almeida</h1>
+        <p>Bem-vindo ao meu site pessoal! Aqui compartilho meus projetos de T.I.</p>
+    </header>
+
+    <section id="projects">
+        <h2>Meus Projetos</h2>
+        <div class="project-list">
+            <!-- Projetos serão adicionados dinamicamente -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Zenio Almeida | <a href="mailto:zenio@email.com">Contato</a></p>
+    </footer>
+</body>
+</html>
+```
+
+---
+
+### **2. style.css** (Estilos)
+```css
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+h1, h2 {
+    margin: 10px 0;
+}
+
+.project-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.project {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+footer {
+    margin-top: 20px;
+    background: #333;
+    color: white;
+    padding: 10px;
+}
+```
+
+---
+
+### **3. script.js** (Adicionando projetos dinamicamente)
+```js
+document.addEventListener("DOMContentLoaded", function() {
+    const projects = [
+        { name: "Sistema de Gestão", description: "Um sistema para gerenciar clientes e vendas.", link: "#" },
+        { name: "App Mobile", description: "Aplicativo para controle de tarefas.", link: "#" },
+        { name: "Dashboard de Dados", description: "Dashboard interativo para visualização de métricas.", link: "#" }
+    ];
+
+    const projectList = document.querySelector(".project-list");
+
+    projects.forEach(project => {
+        const projectDiv = document.createElement("div");
+        projectDiv.classList.add("project");
+        projectDiv.innerHTML = `<h3>${project.name}</h3><p>${project.description}</p><a href="${project.link}">Ver Projeto</a>`;
+        projectList.appendChild(projectDiv);
+    });
+});
+```
+
+---
+
+### Como usar:
+1. Salve esses arquivos na mesma pasta.
+2. Abra o `index.html` no navegador.
+3. Personalize com seus próprios projetos e estilos!
+
+Se quiser hospedar online, pode usar **GitHub Pages**, **Netlify** ou **Vercel**. Precisa de ajuda com isso?
+https://chatgpt.com/g/g-iYSeH3EAI-website-generator/c/67c08d04-81d8-8003-a289-76a5a02614c3

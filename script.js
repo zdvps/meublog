@@ -13,4 +13,5 @@ document.addEventListener("DOMContentLoaded", function() {
         projectDiv.innerHTML = `<h3>${project.name}</h3><p>${project.description}</p><a href="${project.link}">Ver Projeto</a>`;
         projectList.appendChild(projectDiv);
     });
-});
+
+
